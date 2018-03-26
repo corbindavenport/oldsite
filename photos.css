@@ -1,0 +1,25 @@
+/* Styles for photo page */
+
+.photos-container .headline, .photos-container #creditfooter {
+    display: none !important;
+}
+
+.photos-container li small, .photos-container li h2, .photos-container li br {
+    display: none;
+}
+
+.photos-container li, .photos-container div, .photos-container a, .photos-container div img {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline !important;
+}
+
+.photos-container div img {
+    width: 445px;
+}
+
+@media screen and (max-width: 1000px) {
+    .photos-container div img {
+        width: 100%;
+    }
+}

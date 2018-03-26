@@ -8,6 +8,7 @@ body {
 	font-family: 'Arimo', sans-serif;
 	font-size: 24px;
 	line-height: 30px;
+	overflow-y: scroll;
 }
 
 a {
@@ -116,6 +117,16 @@ nav ul li a:hover, nav .name a:hover {
 
 /* Content */
 
+@keyframes fadein {
+	from {
+		margin-top: 140px;
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 .content {
 	max-width: 900px;
 	max-height: 100%;
@@ -123,6 +134,7 @@ nav ul li a:hover, nav .name a:hover {
 	margin-right: auto;
 	margin-top: 120px;
 	text-align: justify;
+	animation: fadein 0.5s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -139,8 +151,9 @@ h1 {
 @media screen and (max-width: 1000px) {
 
 	nav .nav-container {
-		margin-left: 20px;
-		margin-right: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		max-width: 900px;
 	}
 
 	.content {
@@ -151,6 +164,16 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
+
+	@keyframes fadein {
+		from {
+			margin-top: 100px;
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
 
 	.content {
 		margin-top: 80px;
