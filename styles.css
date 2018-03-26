@@ -3,7 +3,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: #FAFAFA;
+	background-color: #FAFAFA;
 	color: #424242;
 	font-family: 'Arimo', sans-serif;
 	font-size: 24px;
@@ -34,11 +34,8 @@ nav {
 	top: 0;
 	left: 0;
 	right: 0;
-	background: #FAFAFA;
+	background-color: #FAFAFA;
 	font-size: 20px;
-	/*background: #1abc9c;
-	border-bottom: 2px solid #16a085;
-	color: #FFF;*/
 	text-transform: uppercase;
 	font-weight: bold;
 	font-family: 'Didact Gothic', sans-serif;
