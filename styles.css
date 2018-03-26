@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic');
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FAFAFA;
+	color: #424242;
+	font-family: 'Arimo', sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+/*
+nav, .content {
+	border: 1px solid red;
+}
+*/
+
+a {
+	color: #03A9F4;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+a:hover {
+	color: #01579B;
+	text-decoration: underline;
+}
+
+/* Nav bar */
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #FAFAFA;
+	font-size: 20px;
+	/*background: #1abc9c;
+	border-bottom: 2px solid #16a085;
+	color: #FFF;*/
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+nav .nav-container {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	overflow: hidden
+}
+
+nav .name {
+	float: left;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	float: right;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+nav .active {
+	border-bottom: 5px solid #424242;
+}
+
+nav ul li a, nav .name a {
+	display: inline-block;
+	color: #424242;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+nav ul li a:hover, nav .name a:hover {
+	color: #01579B;
+	border-bottom: 5px solid #03A9F4;
+	text-decoration: none;
+}
+
+/* Content */
+
+.content {
+	max-width: 900px;
+	max-height: 100%;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 120px;
+	text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+h1 {
+	font-size: 80px;
+	line-height: 80px;
+}
+
+@media screen and (max-width: 1000px) {
+
+	nav .nav-container {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.content {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+	.content {
+		margin-top: 80px;
+		font-size: 22px;
+	}
+
+	h1 {
+		font-size: 60px;
+		line-height: 60px;
+	}
+
+	nav .name {
+		display: none;
+	}
+
+	nav ul {
+		float: none;
+		text-align: center;
+	}
+
+	nav ul li a {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+}
+
+/* Feedburner styles */
+
+.feedburnerFeedBlock {
+	border-top: 5px solid #424242;
+}
+
+.feedburnerFeedBlock ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.feedburnerFeedBlock ul li {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.feedburnerFeedBlock .headline {
+	font-size: 36px;
+}
+
+.feedburnerFeedBlock .date {
+	font-style: italic;
+}
+
+.feedburnerFeedBlock #creditfooter {
+	display: none;
+}
