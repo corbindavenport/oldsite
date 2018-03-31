@@ -135,6 +135,7 @@ nav ul li a:hover, nav .name a:hover {
 	margin-right: auto;
 	margin-top: 120px;
 	animation: fadein 0.5s;
+	text-align: justify;
 	z-index: 1;
 }
 
@@ -164,13 +165,6 @@ h1 {
 
 }
 
-@media screen and (max-width: 650px) {
-	h1 {
-		font-size: 70px;
-		line-height: 70px;
-	}
-}
-
 @media screen and (max-width: 750px) {
 
 	@keyframes fadein {
@@ -196,8 +190,8 @@ h1 {
 
 @media screen and (max-width: 450px) {
 	h1 {
-		font-size: 45px;
-		line-height: 45px;
+		font-size: 35px;
+		line-height: 35px;
 	}
 }
 
