@@ -169,7 +169,7 @@ h1 {
 	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
 
 	@keyframes fadein {
 		from {
@@ -182,27 +182,12 @@ h1 {
 	}
 
 	.content {
-		margin-top: 80px;
 		font-size: 22px;
 	}
 
 	h1 {
 		font-size: 50px;
 		line-height: 50px;
-	}
-
-	nav .name {
-		display: none;
-	}
-
-	nav ul {
-		float: none;
-		text-align: center;
-	}
-
-	nav ul li a {
-		margin-top: 10px;
-		margin-bottom: 10px;
 	}
 
 }
@@ -212,4 +197,82 @@ h1 {
 		font-size: 45px;
 		line-height: 45px;
 	}
+}
+
+/* Side navigation */
+
+label[for='nav-checkbox'] { /* Menu button */
+	float: right;
+	line-height: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@keyframes menu-animation { /* Pulse blue on mobile tap */
+	0% {
+		color: #424242;
+	}
+	30% {
+		color: #03A9F4;
+	}
+	70% {
+		color: #03A9F4;
+	}
+	100% {
+		color: #424242;
+	}
+}
+
+label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
+	animation: menu-animation 1s;
+}
+
+#nav-checkbox {
+	display: none;
+}
+
+@media screen and (max-width: 750px) {
+
+	@keyframes nav-in { /* Animation for sliding menu */
+		from {
+			margin-left: 100%;
+		}
+		to {
+			margin-left: 0;
+		}
+	}
+
+	nav ul { /* Menu */
+		display: none;
+		position: fixed;
+		width: 100%;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		overflow: auto;
+		background-color: #FAFAFA;
+		margin-top: 80px;
+		z-index: 10;
+	}
+
+	nav ul li { /* Menu items */
+		display: block;
+		text-align: center;
+		margin-left: 0 !important;
+	}
+
+	#nav-checkbox:checked + ul { /* Show menu when checkbox is checked */
+		display: block;
+		animation: nav-in 0.5s;
+	}
+
+}
+
+@media screen and (min-width: 751px) {
+
+	label[for='nav-checkbox'] { /* Hide menu button on large screens */
+		display: none;
+	}
+
 }

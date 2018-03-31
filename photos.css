@@ -15,6 +15,7 @@
 }
 
 .photos-container div img {
+    display: block;
     width: 445px;
 }
 
