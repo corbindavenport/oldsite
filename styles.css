@@ -262,7 +262,7 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 	nav ul li { /* Menu items */
 		display: block;
 		text-align: center;
-		margin-left: 0 !important;
+		margin-left: 0;
 	}
 
 	#nav-checkbox:checked + ul { /* Show menu when checkbox is checked */
