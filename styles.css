@@ -34,6 +34,7 @@ nav {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-family: 'Didact Gothic', sans-serif;
+	z-index: 10;
 }
 
 nav .nav-container {
@@ -134,6 +135,7 @@ nav ul li a:hover, nav .name a:hover {
 	margin-right: auto;
 	margin-top: 120px;
 	animation: fadein 0.5s;
+	z-index: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -204,8 +206,9 @@ h1 {
 label[for='nav-checkbox'] { /* Menu button */
 	float: right;
 	line-height: 40px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 @keyframes menu-animation { /* Pulse blue on mobile tap */
