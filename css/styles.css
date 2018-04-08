@@ -23,8 +23,8 @@ a:hover {
 }
 
 a, img { /* Fix image and link outlines in Internet Explorer */
-	border:none;
-	outline:none;
+	border: none;
+	outline: none;
 }
 
 /* Nav bar */
@@ -48,7 +48,7 @@ nav .nav-container {
 	margin-right: auto;
 	margin-top: 0;
 	margin-bottom: 0;
-	overflow: hidden
+	overflow: none;
 }
 
 nav .name {
@@ -63,7 +63,7 @@ nav ul {
 }
 
 nav ul li {
-	display: inline-block;
+	display: inline;
 	list-style-type: none;
 	margin-left: 20px;
 }
