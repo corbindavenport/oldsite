@@ -15,11 +15,18 @@
 	<script>
 	document.createElement('nav');
 	</script>
-	<style>nav {font-weight: normal;}</style>
-	<script src="js/respond.js"></script>
+	<style>
+	nav {font-weight: normal;}
+	</style>
+	<script src="/js/respond.js"></script>
 	<![endif]-->
 	<!--[if lt IE 8]>
-	<style>nav label {display: none}</style>
+	<style>
+	nav label {display: none}
+	body {overflow-y: auto}
+	nav ul li a, nav .name a {border-bottom: 5px solid #FAFAFA;}
+	nav .active {border-bottom: 5px solid #424242 !important;}
+	</style>
 	<![endif]-->
 	<!-- Google social markup: https://developers.google.com/webmasters/social-markup/ -->
 	<script type="application/ld+json">
