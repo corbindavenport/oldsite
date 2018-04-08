@@ -22,6 +22,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+a, img { /* Fix image and link outlines in Internet Explorer */
+	border:none;
+	outline:none;
+}
+
 /* Nav bar */
 
 nav {
@@ -59,6 +64,7 @@ nav ul {
 
 nav ul li {
 	display: inline-block;
+	list-style-type: none;
 	margin-left: 20px;
 }
 
@@ -102,6 +108,10 @@ nav ul li a:hover, nav .name a:hover {
 .feedburnerFeedBlock ul li {
 	margin-top: 40px;
 	margin-bottom: 40px;
+}
+
+.feedburnerFeedBlock ul li div {
+	text-align: justify;
 }
 
 .feedburnerFeedBlock .headline {
