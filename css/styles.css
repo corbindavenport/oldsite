@@ -129,7 +129,7 @@ nav ul li a:hover, nav .name a:hover {
 
 @keyframes fadein {
 	from {
-		margin-top: 140px;
+		margin-top: calc(8% + 140px);
 		opacity: 0;
 	}
 	to {
@@ -142,7 +142,7 @@ nav ul li a:hover, nav .name a:hover {
 	max-height: 100%;
 	margin-left:auto;
 	margin-right: auto;
-	margin-top: 120px;
+	margin-top: calc(8% + 120px);
 	animation: fadein 0.5s;
 	z-index: 1;
 }
@@ -278,6 +278,10 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 		to {
 			margin-left: 0;
 		}
+	}
+
+	.content {
+		margin-top: 120px;
 	}
 
 	nav ul { /* Menu */
