@@ -174,6 +174,16 @@ h2 {
 	display: none;
 }
 
+.email-link, .email-icon {
+	margin-top: 15px;
+	display: inline-block;
+	font-size: 120%;
+}
+
+.email-icon {
+	color: #03A9F4;
+}
+
 /* Mobile styles */
 
 @media screen and (max-width: 1000px) {
@@ -216,6 +226,10 @@ h2 {
 		display: block;
 	}
 
+	.email-link {
+		font-size: 100%;
+	}
+
 	.install-button-container {
 		display: flex;
 		flex-flow: row wrap;
@@ -238,10 +252,12 @@ h2 {
 }
 
 @media screen and (max-width: 450px) {
+
 	h1 {
 		font-size: 35px;
 		line-height: 35px;
 	}
+
 }
 
 /* Side navigation */
