@@ -226,7 +226,7 @@ h2 {
 		display: block;
 	}
 
-	.email-link {
+	.email-link, .email-icon {
 		font-size: 100%;
 	}
 
