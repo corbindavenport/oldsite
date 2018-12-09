@@ -50,6 +50,8 @@
 	<!-- RSS feeds -->
 	<link rel="alternate" type="application/rss+xml" title="Corbin's blog" href="https://feeds.feedburner.com/corbin-blog" />
 	<link rel="alternate" type="application/rss+xml" title="Corbin on the web" href="https://feeds.feedburner.com/corbin-web" />
+	<!-- Skype -->
+	<script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
 </head>
 
 <body>
@@ -73,7 +75,12 @@
 	<div class="content">
 
 		<h1>Contact me 📬</h1>
-		<p>Need to get in contact with me? The best way to do it is via email.</p>
+		<p>Need to get in contact with me? You can
+			<!-- Skype link for clients with JS disabled -->
+			<noscript><a href="https://join.skype.com/invite/s8FfAlzIM8tj">message me on Skype</a>,</noscript>
+			<!-- Skype link for clients with JS -->
+			<a class="skype-button textonly" data-contact-id="corbindavenport">message me on Skype</a>,
+			or send an email.</p>
 		<p>
 			<b>For anything related to Android Police:</b>
 			<br />
