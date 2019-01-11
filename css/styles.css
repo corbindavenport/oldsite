@@ -88,7 +88,7 @@ nav ul li a, nav .name a {
 }
 
 nav ul li a:hover, nav .name a:hover {
-	color: #01579B;
+	color: #03A9F4;
 	border-bottom: 5px solid #03A9F4;
 	text-decoration: none;
 }
@@ -341,4 +341,27 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 		display: none;
 	}
 
+}
+
+/* Dark mode for Safari */
+
+@media (prefers-color-scheme: dark) {
+
+	body, nav, nav ul li a, nav .name a, nav ul, .feedburnerFeedBlock .headline {
+		background-color: #262626;
+		color: #FAFAFA;
+	}
+
+	a:hover, nav ul li a:hover, nav .name a:hover {
+		color: #9adefe;
+	}
+
+	nav ul li a:hover, nav .name a:hover {
+		border-bottom: 5px solid #9adefe;
+	}
+
+	nav .active {
+		border-bottom: 5px solid #FAFAFA;
+	}
+	
 }
