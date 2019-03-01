@@ -178,13 +178,57 @@ h2 {
 	margin-top: 15px;
 	display: inline-block;
 	font-size: 120%;
+	text-align: left;
 }
 
 .email-icon {
 	color: #03A9F4;
 }
 
-/* Mobile styles */
+/* Side navigation */
+
+label[for='nav-checkbox'] { /* Menu button */
+	float: right;
+	line-height: 40px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+@keyframes menu-animation { /* Pulse blue on mobile tap */
+	0% {
+		color: #424242;
+	}
+	30% {
+		color: #03A9F4;
+	}
+	70% {
+		color: #03A9F4;
+	}
+	100% {
+		color: #424242;
+	}
+}
+
+label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
+	animation: menu-animation 1s;
+}
+
+#nav-checkbox {
+	display: none;
+}
+
+/* Hide menu button on large screens */
+
+@media screen and (min-width: 751px) {
+
+	label[for='nav-checkbox'] {
+		display: none;
+	}
+
+}
+
+/* Tablets/small PC screens */
 
 @media screen and (max-width: 1000px) {
 
@@ -201,7 +245,18 @@ h2 {
 
 }
 
+/* Phones */
+
 @media screen and (max-width: 750px) {
+
+	@keyframes nav-in { /* Animation for sliding menu */
+		from {
+			margin-left: 100%;
+		}
+		to {
+			margin-left: 0;
+		}
+	}
 
 	@keyframes fadein {
 		from {
@@ -249,61 +304,6 @@ h2 {
 		border-bottom: 5px solid #424242;
 	}
 
-}
-
-@media screen and (max-width: 450px) {
-
-	h1 {
-		font-size: 35px;
-		line-height: 35px;
-	}
-
-}
-
-/* Side navigation */
-
-label[for='nav-checkbox'] { /* Menu button */
-	float: right;
-	line-height: 40px;
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-@keyframes menu-animation { /* Pulse blue on mobile tap */
-	0% {
-		color: #424242;
-	}
-	30% {
-		color: #03A9F4;
-	}
-	70% {
-		color: #03A9F4;
-	}
-	100% {
-		color: #424242;
-	}
-}
-
-label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
-	animation: menu-animation 1s;
-}
-
-#nav-checkbox {
-	display: none;
-}
-
-@media screen and (max-width: 750px) {
-
-	@keyframes nav-in { /* Animation for sliding menu */
-		from {
-			margin-left: 100%;
-		}
-		to {
-			margin-left: 0;
-		}
-	}
-
 	.content {
 		margin-top: 120px;
 	}
@@ -335,10 +335,59 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 
 }
 
-@media screen and (min-width: 751px) {
+/* Smaller phones */
 
-	label[for='nav-checkbox'] { /* Hide menu button on large screens */
+@media screen and (max-width: 450px) {
+
+	h1 {
+		font-size: 35px;
+		line-height: 35px;
+	}
+
+}
+
+@media screen and (max-width: 350px) {
+
+	.name, .email-icon {
 		display: none;
+	}
+
+	label[for="nav-checkbox"] {
+		padding: 0;
+	}
+
+	nav {
+		height: 40px;
+	}
+
+	.content {
+		margin-top: 60px;
+		font-size: 18px;
+	}
+
+	h1 {
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	h2 {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	nav ul { /* Menu */
+		margin-top: 40px;
+	}
+
+	nav ul li a, nav .name a { /* Menu items */
+		height: 30px;
+		line-height: 30px;
+		margin-top: 0px;
 	}
 
 }

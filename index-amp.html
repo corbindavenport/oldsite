@@ -15,261 +15,450 @@
 	<meta name="theme-color" content="#FAFAFA">
 	<!-- Custom AMP styles -->
 	<style amp-custom>
-	body {
-		margin: 0;
-		padding: 0;
-		background-color: #FAFAFA;
-		color: #424242;
-		font-family: 'Arimo', sans-serif;
-		font-size: 24px;
-		line-height: 30px;
-		overflow-y: scroll;
-	}
-
-	a {
-		color: #03A9F4;
-		text-decoration: none;
-		transition: 0.3s;
-	}
-
-	a:hover {
-		color: #01579B;
-		text-decoration: underline;
-	}
-
-	/* Nav bar */
-
-	nav {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		background-color: #FAFAFA;
-		font-size: 20px;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-family: 'Didact Gothic', sans-serif;
-		z-index: 10;
-	}
-
-	nav .nav-container {
-		max-width: 900px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 0;
-		margin-bottom: 0;
-		overflow: hidden
-	}
-
-	nav .name {
-		float: left;
-	}
-
-	nav ul {
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-		float: right;
-	}
-
-	nav ul li {
-		display: inline-block;
-		margin-left: 20px;
-	}
-
-	nav ul li:first-child {
-		margin-left: 0;
-	}
-
-	nav .active {
-		border-bottom: 5px solid #424242;
-	}
-
-	nav ul li a, nav .name a {
-		display: inline-block;
-		color: #424242;
-		height: 40px;
-		line-height: 40px;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		margin-left: 0;
-		margin-right: 0;
-	}
-
-	nav ul li a:hover, nav .name a:hover {
-		color: #01579B;
-		border-bottom: 5px solid #03A9F4;
-		text-decoration: none;
-	}
-
-	/* Content */
-
-	@keyframes fadein {
-		from {
-			margin-top: 140px;
-			opacity: 0;
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #FAFAFA;
+			color: #424242;
+			font-family: 'Arimo', sans-serif;
+			font-size: 24px;
+			line-height: 30px;
+			overflow-y: scroll;
 		}
-		to {
-			opacity: 1;
+	
+		a {
+			color: #03A9F4;
+			text-decoration: none;
+			transition: 0.3s;
 		}
-	}
-
-	.content {
-		max-width: 900px;
-		max-height: 100%;
-		margin-left:auto;
-		margin-right: auto;
-		margin-top: 120px;
-		animation: fadein 0.5s;
-		z-index: 1;
-	}
-
-	.content p {
-		text-align: justify;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Didact Gothic', sans-serif;
-	}
-
-	h1 {
-		font-size: 80px;
-		line-height: 80px;
-	}
-
-	.desktop-hide {
-		display: none;
-	}
-
-	/* Mobile styles */
-
-	@media screen and (max-width: 1000px) {
-
+	
+		a:hover {
+			color: #01579B;
+			text-decoration: underline;
+		}
+	
+		a,
+		img {
+			/* Fix image and link outlines in Internet Explorer */
+			border: none;
+			outline: none;
+		}
+	
+		/* Nav bar */
+	
+		nav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: #FAFAFA;
+			font-size: 20px;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-family: 'Didact Gothic', sans-serif;
+			z-index: 10;
+		}
+	
 		nav .nav-container {
-			padding-left: 20px;
-			padding-right: 20px;
 			max-width: 900px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 0;
+			margin-bottom: 0;
+			overflow: none;
 		}
-
-		.content {
-			padding-left: 20px;
-			padding-right: 20px;
+	
+		nav .name {
+			float: left;
 		}
-
-	}
-
-	@media screen and (max-width: 750px) {
-
+	
+		nav ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			float: right;
+		}
+	
+		nav ul li {
+			display: inline;
+			list-style-type: none;
+			margin-left: 20px;
+		}
+	
+		nav ul li:first-child {
+			margin-left: 0;
+		}
+	
+		nav .active {
+			border-bottom: 5px solid #424242;
+		}
+	
+		nav ul li a,
+		nav .name a {
+			display: inline-block;
+			color: #424242;
+			height: 40px;
+			line-height: 40px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	
+		nav ul li a:hover,
+		nav .name a:hover {
+			color: #03A9F4;
+			border-bottom: 5px solid #03A9F4;
+			text-decoration: none;
+		}
+	
+		/* Feedburner styles */
+	
+		.feedburnerFeedBlock ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	
+		.feedburnerFeedBlock ul li {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+	
+		.feedburnerFeedBlock ul li div {
+			text-align: justify;
+		}
+	
+		.feedburnerFeedBlock .headline {
+			font-family: 'Didact Gothic', sans-serif;
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 30px;
+		}
+	
+		.feedburnerFeedBlock .date {
+			font-style: italic;
+		}
+	
+		.feedburnerFeedBlock #creditfooter {
+			display: none;
+		}
+	
+		/* Content */
+	
 		@keyframes fadein {
 			from {
-				margin-top: 100px;
+				margin-top: 140px;
+				/* For browsers that don't support calc */
+				margin-top: calc(8% + 140px);
 				opacity: 0;
 			}
 			to {
 				opacity: 1;
 			}
 		}
-
+	
 		.content {
-			font-size: 22px;
+			max-width: 900px;
+			max-height: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 120px;
+			/* For browsers that don't support calc */
+			margin-top: calc(8% + 120px);
+			animation: fadein 0.5s;
+			z-index: 1;
 		}
-
+	
+		.content p {
+			text-align: justify;
+		}
+	
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Didact Gothic', sans-serif;
+		}
+	
 		h1 {
-			font-size: 50px;
-			line-height: 50px;
+			font-size: 80px;
+			line-height: 80px;
 		}
-
+	
+		h2 {
+			margin-top: 50px;
+		}
+	
+		.install-button-container img {
+			margin-right: 15px;
+		}
+	
 		.desktop-hide {
-			display: block;
+			display: none;
 		}
-
-	}
-
-	@media screen and (max-width: 450px) {
-		h1 {
-			font-size: 35px;
-			line-height: 35px;
+	
+		.email-link,
+		.email-icon {
+			margin-top: 15px;
+			display: inline-block;
+			font-size: 120%;
 		}
-	}
-
-	/* Side navigation */
-
-	label[for='nav-checkbox'] { /* Menu button */
-		float: right;
-		line-height: 40px;
-		padding-left: 20px;
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-
-	@keyframes menu-animation { /* Pulse blue on mobile tap */
-		0% {
-			color: #424242;
-		}
-		30% {
+	
+		.email-icon {
 			color: #03A9F4;
 		}
-		70% {
-			color: #03A9F4;
+	
+		/* Side navigation */
+	
+		label[for='nav-checkbox'] {
+			/* Menu button */
+			float: right;
+			line-height: 40px;
+			padding-left: 20px;
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
-		100% {
-			color: #424242;
-		}
-	}
-
-	label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
-		animation: menu-animation 1s;
-	}
-
-	#nav-checkbox {
-		display: none;
-	}
-
-	@media screen and (max-width: 750px) {
-
-		@keyframes nav-in { /* Animation for sliding menu */
-			from {
-				margin-left: 100%;
+	
+		@keyframes menu-animation {
+			/* Pulse blue on mobile tap */
+			0% {
+				color: #424242;
 			}
-			to {
+			30% {
+				color: #03A9F4;
+			}
+			70% {
+				color: #03A9F4;
+			}
+			100% {
+				color: #424242;
+			}
+		}
+	
+		label[for='nav-checkbox']:hover,
+		label[for='nav-checkbox']:focus {
+			animation: menu-animation 1s;
+		}
+	
+		#nav-checkbox {
+			display: none;
+		}
+	
+		/* Hide menu button on large screens */
+	
+		@media screen and (min-width: 751px) {
+	
+			label[for='nav-checkbox'] {
+				display: none;
+			}
+	
+		}
+	
+		/* Tablets/small PC screens */
+	
+		@media screen and (max-width: 1000px) {
+	
+			nav .nav-container {
+				padding-left: 20px;
+				padding-right: 20px;
+				max-width: 900px;
+			}
+	
+			.content {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+	
+		}
+	
+		/* Phones */
+	
+		@media screen and (max-width: 750px) {
+	
+			@keyframes nav-in {
+				/* Animation for sliding menu */
+				from {
+					margin-left: 100%;
+				}
+				to {
+					margin-left: 0;
+				}
+			}
+	
+			@keyframes fadein {
+				from {
+					margin-top: 100px;
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+	
+			.content {
+				font-size: 22px;
+			}
+	
+			h1 {
+				font-size: 50px;
+				line-height: 50px;
+			}
+	
+			.desktop-hide {
+				display: block;
+			}
+	
+			.email-link,
+			.email-icon {
+				font-size: 100%;
+			}
+	
+			.install-button-container {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-around;
+			}
+	
+			.install-button-container img {
+				margin-right: 0;
+			}
+	
+			.feedburnerFeedBlock .headline {
+				background-color: #FAFAFA;
+				position: sticky;
+				top: 80px;
+				display: block;
+				padding-bottom: 10px;
+				border-bottom: 5px solid #424242;
+			}
+	
+			.content {
+				margin-top: 120px;
+			}
+	
+			nav ul {
+				/* Menu */
+				display: none;
+				position: fixed;
+				width: 100%;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				left: 0;
+				overflow: auto;
+				background-color: #FAFAFA;
+				margin-top: 80px;
+				z-index: 10;
+			}
+	
+			nav ul li {
+				/* Menu items */
+				display: block;
+				text-align: center;
 				margin-left: 0;
 			}
+	
+			#nav-checkbox:checked+ul {
+				/* Show menu when checkbox is checked */
+				display: block;
+				animation: nav-in 0.5s;
+			}
+	
 		}
-
-		nav ul { /* Menu */
-			display: none;
-			position: fixed;
-			width: 100%;
-			right: 0;
-			bottom: 0;
-			top: 0;
-			left: 0;
-			overflow: auto;
-			background-color: #FAFAFA;
-			margin-top: 80px;
-			z-index: 10;
+	
+		/* Smaller phones */
+	
+		@media screen and (max-width: 450px) {
+	
+			h1 {
+				font-size: 35px;
+				line-height: 35px;
+			}
+	
 		}
-
-		nav ul li { /* Menu items */
-			display: block;
-			text-align: center;
-			margin-left: 0;
+	
+		@media screen and (max-width: 350px) {
+	
+			.name {
+				display: none;
+			}
+	
+			label[for="nav-checkbox"] {
+				padding: 0;
+			}
+	
+			nav {
+				height: 40px;
+			}
+	
+			.content {
+				margin-top: 60px;
+				font-size: 18px;
+			}
+	
+			h1 {
+				font-size: 30px;
+				line-height: 30px;
+			}
+	
+			h2 {
+				font-size: 25px;
+				line-height: 25px;
+			}
+	
+			h3 {
+				font-size: 20px;
+				line-height: 20px;
+			}
+	
+			nav ul {
+				/* Menu */
+				margin-top: 40px;
+			}
+	
+			nav ul li a,
+			nav .name a {
+				/* Menu items */
+				height: 30px;
+				line-height: 30px;
+				margin-top: 0px;
+			}
+	
 		}
-
-		#nav-checkbox:checked + ul { /* Show menu when checkbox is checked */
-			display: block;
-			animation: nav-in 0.5s;
+	
+		/* Dark mode for Safari */
+	
+		@media (prefers-color-scheme: dark) {
+	
+			body,
+			nav,
+			nav ul li a,
+			nav .name a,
+			nav ul,
+			.feedburnerFeedBlock .headline {
+				background-color: #262626;
+				color: #FAFAFA;
+			}
+	
+			a:hover,
+			nav ul li a:hover,
+			nav .name a:hover {
+				color: #9adefe;
+			}
+	
+			nav ul li a:hover,
+			nav .name a:hover {
+				border-bottom: 5px solid #9adefe;
+			}
+	
+			nav .active {
+				border-bottom: 5px solid #FAFAFA;
+			}
+	
 		}
-
-	}
-
-	@media screen and (min-width: 751px) {
-
-		label[for='nav-checkbox'] { /* Hide menu button on large screens */
-			display: none;
-		}
-
-	}
 	</style>
 	<!-- Google social markup: https://developers.google.com/webmasters/social-markup/ -->
 	<script type="application/ld+json">
