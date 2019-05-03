@@ -414,3 +414,17 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 	}
 	
 }
+
+/* Disable animations on user request */
+
+@media (prefers-reduced-motion: reduce) {
+
+	label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus, #nav-checkbox:checked + ul, .content {
+		animation: none !important;
+	}
+	
+	a {
+		transition: 0ms !important;
+	}
+
+}
