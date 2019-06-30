@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic');
 
+@keyframes fadein {
+	from {
+		margin-top: 10px;
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+body, html {
+	height: 100%;
+	overflow: hidden;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -8,7 +23,7 @@ body {
 	font-family: 'Arimo', sans-serif;
 	font-size: 24px;
 	line-height: 30px;
-	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
 a {
@@ -27,70 +42,108 @@ a, img { /* Fix image and link outlines in Internet Explorer */
 	outline: none;
 }
 
-/* Nav bar */
+h1 {
+	font-size: 80px;
+	line-height: 85px;
+}
 
-nav {
+audio {
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: #FAFAFA;
-	font-size: 20px;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-family: 'Didact Gothic', sans-serif;
+	right: 10px;
+	bottom: 10px;
 	z-index: 10;
 }
 
-nav .nav-container {
-	max-width: 900px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0;
-	margin-bottom: 0;
-	overflow: none;
+/* Navigation */
+
+.desktop-nav, .mobile-nav {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background-color: #FAFAFA;
+	text-align: center;
+	padding: 20px;
 }
 
-nav .name {
-	float: left;
+.desktop-nav {
+	top: 0;
 }
 
-nav ul {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	float: right;
-}
-
-nav ul li {
-	display: inline;
-	list-style-type: none;
-	margin-left: 20px;
-}
-
-nav ul li:first-child {
-	margin-left: 0;
-}
-
-nav .active {
-	border-bottom: 5px solid #424242;
-}
-
-nav ul li a, nav .name a {
-	display: inline-block;
-	color: #424242;
-	height: 40px;
+.mobile-nav {
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 40px;
 	line-height: 40px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left: 0;
+	border-top: 3px solid #424242;
+}
+
+.desktop-nav a {
+	font-weight: bold;
+	margin-right: 50px;
+}
+
+.desktop-nav a:last-of-type {
 	margin-right: 0;
 }
 
-nav ul li a:hover, nav .name a:hover {
+.desktop-nav a:hover, .mobile-nav a:hover {
+	text-decoration: none;
+}
+
+.desktop-nav a:hover {
 	color: #03A9F4;
 	border-bottom: 5px solid #03A9F4;
-	text-decoration: none;
+}
+
+.mobile-nav {
+	display: none;	
+}
+
+/* Main layouts */
+
+.content {
+	width: calc(100% - 100px);
+	height: calc(100% - 100px);
+	z-index: 1;
+	padding: 70px 50px 50px 50px;
+	animation: fadein 1s;
+}
+
+.content:last-of-type {
+	margin-bottom: 0;
+}
+
+.content-main {
+	padding: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.content-main span {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 780px;
+}
+
+.content-scroll {
+	margin: 0 auto;
+	max-width: 900px;
+	padding: 50px;
+	width: calc(100% - 100px);
+	height: calc(100% - 100px);
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.install-button-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.install-button-container img {
+	margin-right: 0;
 }
 
 /* Feedburner styles */
@@ -125,269 +178,50 @@ nav ul li a:hover, nav .name a:hover {
 	display: none;
 }
 
-/* Content */
-
-@keyframes fadein {
-	from {
-		margin-top: 140px; /* For browsers that don't support calc */
-		margin-top: calc(8% + 140px);
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-.content {
-	max-width: 900px;
-	max-height: 100%;
-	margin-left:auto;
-	margin-right: auto;
-	margin-top: 120px; /* For browsers that don't support calc */
-	margin-top: calc(8% + 120px);
-	animation: fadein 0.5s;
-	z-index: 1;
-}
-
-.content p {
-	text-align: justify;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Didact Gothic', sans-serif;
-}
-
-h1 {
-	font-size: 80px;
-	line-height: 80px;
-}
-
-h2 {
-	margin-top: 50px;
-}
-
-.install-button-container img {
-	margin-right: 15px;
-}
-
-.desktop-hide {
-	display: none;
-}
-
-.email-link, .email-icon {
-	margin-top: 15px;
-	display: inline-block;
-	font-size: 120%;
-	text-align: left;
-}
-
-.email-icon {
-	color: #03A9F4;
-}
-
-/* Side navigation */
-
-label[for='nav-checkbox'] { /* Menu button */
-	float: right;
-	line-height: 40px;
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-@keyframes menu-animation { /* Pulse blue on mobile tap */
-	0% {
-		color: #424242;
-	}
-	30% {
-		color: #03A9F4;
-	}
-	70% {
-		color: #03A9F4;
-	}
-	100% {
-		color: #424242;
-	}
-}
-
-label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
-	animation: menu-animation 1s;
-}
-
-#nav-checkbox {
-	display: none;
-}
-
-/* Hide menu button on large screens */
-
-@media screen and (min-width: 751px) {
-
-	label[for='nav-checkbox'] {
-		display: none;
-	}
-
-}
-
 /* Tablets/small PC screens */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
 
-	nav .nav-container {
-		padding-left: 20px;
-		padding-right: 20px;
-		max-width: 900px;
+	h1 {
+		font-size: 60px;
+		line-height: 65px;
 	}
 
 	.content {
-		padding-left: 20px;
-		padding-right: 20px;
+		width: calc(100% - 20px);
+		height: calc(100% - 20px);
+		padding: 10px;
 	}
 
 }
 
 /* Phones */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
 
-	@keyframes nav-in { /* Animation for sliding menu */
-		from {
-			margin-left: 100%;
-		}
-		to {
-			margin-left: 0;
-		}
-	}
-
-	@keyframes fadein {
-		from {
-			margin-top: 100px;
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
-	.content {
+	body {
 		font-size: 22px;
+		line-height: 24px;
 	}
 
-	h1 {
-		font-size: 50px;
-		line-height: 50px;
-	}
-
-	.desktop-hide {
-		display: block;
-	}
-
-	.email-link, .email-icon {
-		font-size: 100%;
-	}
-
-	.install-button-container {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-around;
-	}
-
-	.install-button-container img {
-		margin-right: 0;
-	}
-
-	.feedburnerFeedBlock .headline {
-		background-color: #FAFAFA;
-		position: sticky;
-		top: 80px;
-		display: block;
-		padding-bottom: 10px;
-		border-bottom: 5px solid #424242;
-	}
-
-	.content {
-		margin-top: 120px;
-	}
-
-	nav ul { /* Menu */
+	.desktop-nav {
 		display: none;
-		position: fixed;
-		width: 100%;
-		right: 0;
+	}
+
+	.mobile-nav {
 		bottom: 0;
-		top: 0;
-		left: 0;
-		overflow: auto;
-		background-color: #FAFAFA;
-		margin-top: 80px;
-		z-index: 10;
-	}
-
-	nav ul li { /* Menu items */
-		display: block;
-		text-align: center;
-		margin-left: 0;
-	}
-
-	#nav-checkbox:checked + ul { /* Show menu when checkbox is checked */
-		display: block;
-		animation: nav-in 0.5s;
-	}
-
-}
-
-/* Smaller phones */
-
-@media screen and (max-width: 450px) {
-
-	h1 {
-		font-size: 35px;
-		line-height: 35px;
-	}
-
-}
-
-@media screen and (max-width: 350px) {
-
-	.name, .email-icon {
-		display: none;
-	}
-
-	label[for="nav-checkbox"] {
-		padding: 0;
-	}
-
-	nav {
-		height: 40px;
-	}
-
-	.content {
-		margin-top: 60px;
-		font-size: 18px;
+		display: flex;
 	}
 
 	h1 {
-		font-size: 30px;
-		line-height: 30px;
+		font-size: 40px;
+		line-height: 45px;
 	}
 
-	h2 {
-		font-size: 25px;
-		line-height: 25px;
-	}
-
-	h3 {
-		font-size: 20px;
-		line-height: 20px;
-	}
-
-	nav ul { /* Menu */
-		margin-top: 40px;
-	}
-
-	nav ul li a, nav .name a { /* Menu items */
-		height: 30px;
-		line-height: 30px;
-		margin-top: 0px;
+	.content, .content-scroll {
+		padding: 20px 20px 100px 20px;
+		width: calc(100% - 40px);
+		height: calc(100% - 120px);
 	}
 
 }
@@ -396,21 +230,9 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 
 @media (prefers-color-scheme: dark) {
 
-	body, nav, nav ul li a, nav .name a, nav ul, .feedburnerFeedBlock .headline {
+	body {
 		background-color: #262626;
 		color: #FAFAFA;
-	}
-
-	a:hover, nav ul li a:hover, nav .name a:hover {
-		color: #9adefe;
-	}
-
-	nav ul li a:hover, nav .name a:hover {
-		border-bottom: 5px solid #9adefe;
-	}
-
-	nav .active {
-		border-bottom: 5px solid #FAFAFA;
 	}
 	
 }
@@ -419,11 +241,11 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 
 @media (prefers-reduced-motion: reduce) {
 
-	label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus, #nav-checkbox:checked + ul, .content {
-		animation: none !important;
+	body {
+		scroll-behavior: auto !important;
 	}
 	
-	a {
+	a, body {
 		transition: 0ms !important;
 	}
 
