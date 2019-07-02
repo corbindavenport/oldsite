@@ -23,7 +23,6 @@ body {
 	font-family: 'Arimo', sans-serif;
 	font-size: 24px;
 	line-height: 30px;
-	scroll-behavior: smooth;
 }
 
 a {
@@ -240,12 +239,8 @@ audio {
 /* Disable animations on user request */
 
 @media (prefers-reduced-motion: reduce) {
-
-	body {
-		scroll-behavior: auto !important;
-	}
 	
-	a, body {
+	a {
 		transition: 0ms !important;
 	}
 
