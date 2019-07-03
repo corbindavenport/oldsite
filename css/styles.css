@@ -57,8 +57,6 @@ audio {
 
 .desktop-nav, .mobile-nav {
 	position: fixed;
-	left: 0;
-	right: 0;
 	z-index: 100;
 	background-color: #FAFAFA;
 	text-align: center;
@@ -66,15 +64,31 @@ audio {
 }
 
 .desktop-nav {
+	left: 0;
+	right: 0;
 	top: 0;
 }
 
 .mobile-nav {
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
 	flex-direction: row;
 	justify-content: space-between;
 	font-size: 40px;
 	line-height: 40px;
-	border-top: 3px solid #424242;
+	border-radius: 30px;
+	-webkit-box-shadow: 0px 0px 8px 0px rgba(66,66,66,1);
+	-moz-box-shadow: 0px 0px 8px 0px rgba(66,66,66,1);
+	box-shadow: 0px 0px 8px 0px rgba(66,66,66,1);
+}
+
+.mobile-nav a:first-of-type {
+	margin-left: 10px;
+}
+
+.mobile-nav a:last-of-type {
+	margin-right: 10px;
 }
 
 .desktop-nav a {
@@ -115,7 +129,7 @@ audio {
 
 .content-main {
 	padding: 50px;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 }
 
@@ -189,7 +203,7 @@ audio {
 	.content {
 		width: calc(100% - 20px);
 		height: calc(100% - 20px);
-		padding: 10px;
+		padding: 80px 10px 10px 10px;
 	}
 
 }
@@ -208,7 +222,6 @@ audio {
 	}
 
 	.mobile-nav {
-		bottom: 0;
 		display: flex;
 	}
 
@@ -217,10 +230,96 @@ audio {
 		line-height: 45px;
 	}
 
+	h2 {
+		font-size: 35px;
+		line-height: 40px;
+	}
+
 	.content, .content-scroll {
 		padding: 20px 20px 100px 20px;
 		width: calc(100% - 40px);
 		height: calc(100% - 120px);
+	}
+
+}
+
+/* Smaller phones */
+
+@media screen and (max-width: 350px) {
+
+	body {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	h1 {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	h2 {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 35px;
+	}
+
+	.mobile-nav {
+		font-size: 30px;
+		line-height: 30px;
+		padding: 10px;
+	}
+
+	.content, .content-scroll {
+		padding: 20px 20px 60px 20px;
+		width: calc(100% - 40px);
+		height: calc(100% - 80px);
+	}
+
+}
+
+/* Reeeaaaalllly small screens */
+
+@media screen and (max-width: 250px) {
+
+	body {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	h1 {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	h2 {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	h2 {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	.mobile-nav {
+		font-size: 20px;
+		line-height: 20px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 0;
+	}
+
+	.mobile-nav a:first-of-type {
+		margin-left: 0;
+	}
+	
+	.mobile-nav a:last-of-type {
+		margin-right: 0;
 	}
 
 }
