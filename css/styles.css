@@ -46,11 +46,8 @@ h1 {
 	line-height: 85px;
 }
 
-audio {
-	position: fixed;
-	right: 10px;
-	bottom: 10px;
-	z-index: 10;
+.desktop-hide {
+	display: none;
 }
 
 /* Navigation */
@@ -265,6 +262,10 @@ audio {
 	h2 {
 		font-size: 35px;
 		line-height: 40px;
+	}
+
+	.desktop-hide {
+		display: block;
 	}
 
 	.content, .content-scroll {
