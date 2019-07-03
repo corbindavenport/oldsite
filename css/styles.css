@@ -60,13 +60,21 @@ audio {
 	z-index: 100;
 	background-color: #FAFAFA;
 	text-align: center;
-	padding: 20px;
+	padding: 15px;
+	-webkit-box-shadow: 0px 0px 8px 0px rgba(66,66,66,1);
+	-moz-box-shadow: 0px 0px 8px 0px rgba(66,66,66,1);
+	box-shadow: 0px 0px 8px 0px rgba(66,66,66,1);
+	border-radius: 30px;
 }
 
 .desktop-nav {
+	top: 10px;
 	left: 0;
 	right: 0;
-	top: 0;
+	width: 700px;
+	margin: 0 auto;
+	font-size: 25px;
+	line-height: 25px;
 }
 
 .mobile-nav {
@@ -77,10 +85,6 @@ audio {
 	justify-content: space-between;
 	font-size: 40px;
 	line-height: 40px;
-	border-radius: 30px;
-	-webkit-box-shadow: 0px 0px 8px 0px rgba(66,66,66,1);
-	-moz-box-shadow: 0px 0px 8px 0px rgba(66,66,66,1);
-	box-shadow: 0px 0px 8px 0px rgba(66,66,66,1);
 }
 
 .mobile-nav a:first-of-type {
@@ -149,6 +153,24 @@ audio {
 	overflow-x: hidden;
 }
 
+.content-scroll::-webkit-scrollbar {
+	width: 10px;
+}
+
+.content-scroll::-webkit-scrollbar-track {
+	background: #F1F1F1;
+	border-radius: 5px;
+}
+
+.content-scroll::-webkit-scrollbar-thumb {
+	background: #424242;
+	border-radius: 5px;
+}
+
+.content-scroll::-webkit-scrollbar-thumb:hover {
+	background: #303030; 
+}
+
 .install-button-container {
 	display: flex;
 	flex-flow: row wrap;
@@ -203,7 +225,17 @@ audio {
 	.content {
 		width: calc(100% - 20px);
 		height: calc(100% - 20px);
-		padding: 80px 10px 10px 10px;
+		padding: 10px;
+	}
+
+	.desktop-nav {
+		width: calc(100% - 100px);
+		left: 30px;
+		right: 30px;
+	}
+
+	.desktop-nav a {
+		margin-right: 15px;
 	}
 
 }
@@ -241,6 +273,10 @@ audio {
 		height: calc(100% - 120px);
 	}
 
+	.content-scroll::-webkit-scrollbar {
+		width: 6px;
+	}
+
 }
 
 /* Smaller phones */
@@ -257,7 +293,7 @@ audio {
 		line-height: 35px;
 	}
 
-	h2 {
+	h2, .feedburnerFeedBlock .headline {
 		font-size: 25px;
 		line-height: 30px;
 	}
@@ -295,7 +331,7 @@ audio {
 		line-height: 30px;
 	}
 
-	h2 {
+	h2, .feedburnerFeedBlock .headline {
 		font-size: 20px;
 		line-height: 25px;
 	}
@@ -328,7 +364,7 @@ audio {
 
 @media (prefers-color-scheme: dark) {
 
-	body {
+	body, .desktop-nav, .mobile-nav {
 		background-color: #262626;
 		color: #FAFAFA;
 	}
