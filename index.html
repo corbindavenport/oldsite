@@ -4,208 +4,83 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Corbin Davenport</title>
-	<meta name="description" content="Corbin Davenport is a tech journalist and software developer.">
+	<meta name="description" content="Corbin Davenport is a tech journalist, web developer, and browser extension developer.">
 	<meta name="viewport" content="initial-scale=1">
 	<meta name="keywords" content="corbin, davenport, corbin davenport">
 	<meta name="language" content="English">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link href="favicon.ico" rel="icon" type="image/x-icon">
 	<meta name="theme-color" content="#FAFAFA">
-	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-24836809-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-24836809-2');
-	</script>
-	<!-- RSS feeds -->
-	<link rel="alternate" type="application/rss+xml" title="Corbin's blog" href="https://feeds.feedburner.com/corbin-blog" />
-	<!-- Google search verification -->
-	<meta name="google-site-verification" content="YfuQ4yNBfx5PZAjBr0Rw4tuW7K6nZi24VJIQj9oPM8s" />
 	<!--[if lt IE 9]>
 	<script>
 	document.createElement('nav');
 	</script>
+	<style>
+	nav {font-weight: normal;}
+	</style>
 	<script src="js/respond.js"></script>
 	<![endif]-->
+	<!--[if lt IE 8]>
+	<style>
+	nav label {display: none}
+	body {overflow-y: auto}
+	nav ul li a, nav .name a {border-bottom: 5px solid #FAFAFA;}
+	nav .active {border-bottom: 5px solid #424242 !important;}
+	</style>
+	<![endif]-->
+	<!-- Google social markup: https://developers.google.com/webmasters/social-markup/ -->
+	<script type="application/ld+json">
+		{ "@context" : "http://schema.org",
+			"@type" : "Person",
+			"name" : "Corbin Davenport",
+			"url" : "https://corbin.io",
+			"sameAs" : [ "https://twitter.com/corbindavenport",
+					"https://www.linkedin.com/in/corbindavenport"] 
+		}
+	</script>
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-24836809-2"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-24836809-2');
+	</script>
+	<!-- RSS feeds -->
+	<link rel="alternate" type="application/rss+xml" title="Corbin's blog" href="https://feeds.feedburner.com/corbin-blog" />
+	
+	<!-- Google AMP -->
+	<link rel="amphtml" href="index-amp.html">
+	<!-- Google search verification -->
+	<meta name="google-site-verification" content="YfuQ4yNBfx5PZAjBr0Rw4tuW7K6nZi24VJIQj9oPM8s" />
 </head>
 
 <body>
 
-	<nav class="desktop-nav">
-		<a href="#home">Home</a>
-		<a href="#projects">Projects</a>
-		<a href="#web">On the web</a>
-		<a href="#contact">Contact</a>
+	<nav role="navigation">
+		<div class="nav-container">
+			<span class="name">
+				<a href="/" class="active">Corbin Davenport</a>
+			</span>
+			<label for="nav-checkbox" aria-label="Toggle menu">&#9776;</label>
+			<input id="nav-checkbox" type="checkbox" autocomplete="off" autocomplete="off">
+			<ul>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="web.html">On the web</a></li>
+				<li><a href="photos.html">Photos</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
 	</nav>
 
-	<nav class="mobile-nav">
-		<a href="#home">🏠</a>
-		<a href="#projects">📝</a>
-		<a href="#web">🌐</a>
-		<a href="#contact">📬</a>
-	</nav>
+	<div class="content">
 
-	<!-- Home -->
-
-	<div id="home" class="content content-main">
-		<span>
-			<h1>Hi, I'm Corbin. 👋</h1>
-			<p>I'm a tech journalist currently working for <a href="https://www.androidpolice.com"
-					target="_blank">Android Police</a> and <a href="https://www.pcgamer.com/" target="_blank">PC
-					Gamer</a>. I'm also a web developer and browser extension developer.</p>
-			<p>You can follow me on <a href="https://twitter.com/intent/follow?screen_name=corbindavenport"
-					target="_blank">Twitter</a>, <a rel="me" href="https://toot.cafe/@corbin"
-					target="_blank">Mastodon</a>, and <a href="https://500px.com/corbindavenport"
-					target="_blank">500px</a>. I also have <a href="https://blog.corbin.io/">a blog</a>.
-			</p>
-			<p class="desktop-hide">Contact info is available <a href="#contact">here</a>.</p>
-		</span>
-	</div>
-
-	<!-- Projects -->
-
-	<div id="projects" class="content content-scroll">
-		<h1>Projects 📝</h1>
-		<p>Here are some projects that I have worked on over the past few years. All of them are free and the code is
-			open-source under various licenses. If you enjoy any of these projects, consider <a
-				href="https://www.patreon.com/corbindavenport" target="_blank">supporting my development work on
-				Patreon</a>.</p>
-
-		<h2>Web apps</h2>
-
-		<p>
-			<h3><a href="https://photostack.app" target="_blank">PhotoStack</a></h3>
-		</p>
-		<p>PhotoStack is an online batch photo editor with offline support, advanced watermarking, and customizable
-			export options.</p>
-		<p>
-			<h3><a href="https://whatdevice.app/" target="_blank">WhatDevice</a></h3>
-		</p>
-		<p>WhatDevice is a web app that displays information about your device and browser, using JavaScript and WebGL.
-		</p>
-		<p>
-			<h3><a href="https://cache.corbin.io" target="_blank">CacheView</a></h3>
-		</p>
-		<p>CacheView is a simple web app that finds cached (backed up) copies of a specific web page from the Wayback
-			Machine, Google's web cache, and Google's Accelerated Mobile Pages (AMP) cache.</p>
-
-		<h2>Browser extensions</h2>
-
-		<p>
-			<h3><a href="https://github.com/corbindavenport/peek" target="_blank">Peek</a></h3>
-		</p>
-		<p>Peek allows you to preview dozens of types of documents, without downloading them. Just hover over a file's
-			link, and Peek will display an interactive preview instantly. The extension supports PDFs, Office documents,
-			videos, audio, Google Docs links, and more.</p>
-		<p>
-			<div class="install-button-container">
-				<a href="https://chrome.google.com/webstore/detail/peek/bfpogemllmpcpclnadighnpeeaegigjk"
-					target="_blank"><img src="img/chrome-button.png"></a>
-				<a href="https://addons.opera.com/en/extensions/details/peek/" target="_blank"><img
-						src="img/opera-button.png"></a>
-			</div>
-		</p>
-		<p>
-			<h3><a href="https://github.com/corbindavenport/noplugin" target="_blank">NoPlugin</a></h3>
-		</p>
-		<p>Browser plugins are unsupported by modern browsers, but what if you come across a QuickTime video or a music
-			page using Windows Media Player? NoPlugin allows you to play some plugin content by converting them to HTML5
-			players. If NoPlugin can't play a file, it can download the media file to your computer.</p>
-		<p>
-			<div class="install-button-container">
-				<a href="https://chrome.google.com/webstore/detail/noplugin-previously-quick/llpahfhchhlfdigfpeimeagojnkgeice"
-					target="_blank"><img src="img/chrome-button.png"></a>
-				<a href="https://addons.mozilla.org/en-US/firefox/addon/noplugin/" target="_blank"><img
-						src="img/firefox-button.png"></a>
-				<a href="https://addons.opera.com/en/extensions/details/noplugin/" target="_blank"><img
-						src="img/opera-button.png"></a>
-			</div>
-		</p>
-		<p>
-			<h3><a href="https://github.com/corbindavenport/wikipedia-search" target="_blank">Wikipedia Search</a></h3>
-		</p>
-		<p>Wikipedia Search adds the ability to search Wikipedia straight from the address bar. You can also right-click
-			a selected word or phrase to perform a search.</p>
-		<p>
-			<div class="install-button-container">
-				<a href="https://chrome.google.com/webstore/detail/wikipedia-search/lipakennkogpodadpikgipnogamhklmk"
-					target="_blank"><img src="img/chrome-button.png"></a>
-				<a href="https://addons.opera.com/en/extensions/details/wikipedia-search/" target="_blank"><img
-						src="img/opera-button.png"></a>
-			</div>
-		</p>
-
-		<h2>Other</h2>
-
-		<p>
-			<h3><a href="https://github.com/corbindavenport/tootbot" target="_blank">Tootbot</a></h3>
-		</p>
-		<p>Tootbot is a Python application that automatically mirrors Reddit posts to Twitter and Mastodon, with media
-			attachments for images/GIFs. It can be run locally on a computer, or in the cloud for free using <a
-				href="https://www.heroku.com/" target="_blank">Heroku</a>.</p>
-		<p>
-			<h3><a href="https://github.com/corbindavenport/nexus-tools" target="_blank">Nexus Tools</a></h3>
-		</p>
-		<p>Nexus Tools is an installer for the Android debug/development command-line tools ADB (Android Device Bridge)
-			and Fastboot for Mac OS X and Linux. It's the fastest way to get started with everything from Android
-			development to fixing your phone. Just enter a single command, and Nexus Tools will do the rest.</p>
-	</div>
-
-	<!-- On the web -->
-
-	<div id="web" class="content content-scroll">
-		<h1>On the web 🌐</h1>
-		<p>This is a feed of recent content I've created across the web. This includes <a
-				href="https://blog.corbin.io" target="_blank">my personal blog posts</a>, some of <a
-				href="https://www.androidpolice.com/author/corbin-davenport/" target="_blank">my posts on Android
-				Police</a>, and <a href="https://www.youtube.com/channel/UC_c_u7S24rU23He0CWOANHg" target="_blank">my
-				YouTube channel</a>. This does not include <a
-				href="https://www.pcgamer.com/author/corbin-davenport/" target="_blank">my posts on PC Gamer</a>.</p>
-		<script src="https://feeds.feedburner.com/corbin-web?format=sigpro" type="text/javascript"></script>
-		<noscript>
-			<p>
-				<i>Uh oh, you have JavaScript disabled. You'll have to click <a
-						href="https://feeds.feedburner.com/corbin-web" target="_blank">here</a> to see the feed.</i>
-			</p>
-		</noscript>
-	</div>
-
-	<!-- Contact page -->
-
-	<div id="contact" class="content content-main">
-		<span>
-			<h1>Contact me 📬</h1>
-			<p>Need to reach me? Send me an email.</p>
-			<p>
-				<b>For anything related to Android Police:</b>
-				<br />
-				<span class="email-icon">&#9993;</span>
-				<a class="email-link" href="mailto:corbin@androidpolice.com">corbin at androidpolice.com</a>
-			</p>
-			<p>
-				<b>For anything related to PC Gamer:</b>
-				<br />
-				<span class="email-icon">&#9993;</span>
-				<a class="email-link" href="mailto:pcgamer@corbin.io">pcgamer at corbin.io</a>
-			</p>
-			<p>
-				<b>For anything else:</b>
-				<br />
-				<span class="email-icon">&#9993;</span>
-				<a class="email-link" href="mailto:me@corbin.io">me at corbin.io</a>
-			</p>
-			<!-- ProtonMail -->
-			<div style="border-top: 1px solid #424242;">
-				<p>
-					<b>ProtonMail address for encrypted communication:</b>
-					<br />
-					<span class="email-icon">&#9993;</span>
-					<a class="email-link" href="mailto:	corbindavenport@protonmail.com">corbindavenport at protonmail.com</a>
-				</p>
-			</div>
-		</span>
+		<h1>Hi, I'm Corbin 👋</h1>
+		<p>I'm a tech journalist currently working for <a href="https://www.androidpolice.com" target="_blank">Android Police</a> and <a href="https://www.pcgamer.com/" target="_blank">PC Gamer</a>. I'm also a web developer and browser extension developer.</p>
+		<p>You can follow me on <a href="https://twitter.com/intent/follow?screen_name=corbindavenport" target="_blank">Twitter</a>, <a rel="me" href="https://toot.cafe/@corbin" target="_blank">Mastodon</a>, and <a href="https://500px.com/corbindavenport" target="_blank">500px</a>. I also have <a href="https://blog.corbin.io/">a blog</a>.
+		<p class="desktop-hide">Contact info is available <a href="contact.html">here</a>.</p>
+		
 	</div>
 
 </body>
