@@ -20,7 +20,11 @@
     border: 5px solid #424242;
     display: inline-block;
     vertical-align: middle;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
+}
+
+.photos-container li p {
+    display: none; /* Hide captions */
 }
 
 @media screen and (max-width: 1000px) {
