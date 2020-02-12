@@ -17,7 +17,7 @@ fetch('https://api.twitch.tv/helix/streams?user_id=37983012', {
             var container = document.createElement('div')
             container.classList.add('twitch-container')
             var player = document.createElement('embed')
-            player.setAttribute('src', 'https://player.twitch.tv/?allowfullscreen&playsinline&channel=twitchrivals')
+            player.setAttribute('src', 'https://player.twitch.tv/?allowfullscreen&playsinline&channel=corbindavenport')
             player.setAttribute('allowfullscreen', true)
             container.appendChild(player)
             document.querySelector('div[class="content"]').prepend(container)
