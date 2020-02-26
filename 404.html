@@ -38,15 +38,14 @@
 	<nav role="navigation">
 		<div class="nav-container">
 			<span class="name">
-					<a href="/">Corbin Davenport</a>
+				<a href="/" class="active">Corbin Davenport</a>
 			</span>
-			<label for="nav-checkbox" aria-label="Toggle menu">&#9776;</label>
-			<input id="nav-checkbox" type="checkbox" autocomplete="off">
-			<ul>
-				<li><a href="/projects.html">Projects</a></li>
-				<li><a href="/web.html">On the web</a></li>
-				<li><a href="/photos.html">Photos</a></li>
-				<li><a href="/contact.html">Contact</a></li>
+			<div id="nav-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</div>
+			<ul id="nav-links" class="hidden" role="menu">
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="web.html">On the web</a></li>
+				<li><a href="photos.html">Photos</a></li>
+				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -57,6 +56,8 @@
 		<p>The page you were looking for isn't available.</p>
 
 	</div>
+
+	<script src="js/main.js"></script>
 
 </body>
 

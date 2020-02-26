@@ -211,42 +211,19 @@ h2 {
 
 /* Side navigation */
 
-label[for='nav-checkbox'] { /* Menu button */
+#nav-btn {
 	float: right;
 	line-height: 40px;
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-@keyframes menu-animation { /* Pulse blue on mobile tap */
-	0% {
-		color: #424242;
-	}
-	30% {
-		color: #03A9F4;
-	}
-	70% {
-		color: #03A9F4;
-	}
-	100% {
-		color: #424242;
-	}
-}
-
-label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
-	animation: menu-animation 1s;
-}
-
-#nav-checkbox {
-	display: none;
+	padding: 20px;
+	margin-right: -20px;
+	cursor: pointer;
 }
 
 /* Hide menu button on large screens */
 
 @media screen and (min-width: 751px) {
 
-	label[for='nav-checkbox'] {
+	#nav-btn {
 		display: none;
 	}
 
@@ -272,15 +249,6 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 /* Phones */
 
 @media screen and (max-width: 750px) {
-
-	@keyframes nav-in { /* Animation for sliding menu */
-		from {
-			margin-left: 100%;
-		}
-		to {
-			margin-left: 0;
-		}
-	}
 
 	@keyframes fadein {
 		from {
@@ -332,8 +300,11 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 		margin-top: 120px;
 	}
 
-	nav ul { /* Menu */
+	.hidden {
 		display: none;
+	}
+
+	#nav-links { /* Menu */
 		position: fixed;
 		width: 100%;
 		right: 0;
@@ -346,15 +317,10 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 		z-index: 10;
 	}
 
-	nav ul li { /* Menu items */
+	#nav-links li { /* Menu items */
 		display: block;
 		text-align: center;
 		margin-left: 0;
-	}
-
-	#nav-checkbox:checked + ul { /* Show menu when checkbox is checked */
-		display: block;
-		animation: nav-in 0.5s;
 	}
 
 }
@@ -376,7 +342,7 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 		display: none;
 	}
 
-	label[for="nav-checkbox"] {
+	#nav-btn {
 		padding: 0;
 	}
 
@@ -404,19 +370,24 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 		line-height: 20px;
 	}
 
-	nav ul { /* Menu */
+	#nav-links { /* Menu */
 		margin-top: 40px;
 	}
 
-	nav ul li a, nav .name a { /* Menu items */
+	#nav-links li a, nav .name a { /* Menu items */
 		height: 30px;
 		line-height: 30px;
 		margin-top: 0px;
 	}
 
+	.feedburnerFeedBlock .headline {
+		font-size: 20px;
+		position: initial;
+	}
+
 }
 
-/* Dark mode for Safari */
+/* Dark mode support */
 
 @media (prefers-color-scheme: dark) {
 
@@ -443,7 +414,7 @@ label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus {
 
 @media (prefers-reduced-motion: reduce) {
 
-	label[for='nav-checkbox']:hover, label[for='nav-checkbox']:focus, #nav-checkbox:checked + ul, .content {
+	.content {
 		animation: none !important;
 	}
 	

@@ -9,8 +9,8 @@
 	<meta name="keywords" content="corbin, davenport, corbin davenport">
 	<meta name="language" content="English">
 	<meta name="supported-color-schemes" content="dark light">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/photos.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/photos.css">
 	<link href="favicon.ico" rel="icon" type="image/x-icon">
 	<meta name="theme-color" content="#FAFAFA">
 	<!--[if lt IE 9]>
@@ -33,11 +33,11 @@
 	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-24836809-2"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-	gtag('config', 'UA-24836809-2');
+		gtag('config', 'UA-24836809-2');
 	</script>
 	<!-- RSS feeds -->
 	<link rel="alternate" type="application/rss+xml" title="Corbin's blog" href="https://feeds.feedburner.com/corbin-blog" />
@@ -46,26 +46,27 @@
 <body>
 
 	<nav role="navigation">
-			<div class="nav-container">
-				<span class="name">
-					<a href="/">Corbin Davenport</a>
-				</span>
-				<label for="nav-checkbox" aria-label="Toggle menu">&#9776;</label>
-				<input id="nav-checkbox" type="checkbox" autocomplete="off">
-				<ul>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="web.html">On the web</a></li>
-					<li><a href="photos.html" class="active">Photos</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
+		<div class="nav-container">
+			<span class="name">
+				<a href="/" class="active">Corbin Davenport</a>
+			</span>
+			<div id="nav-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</div>
+			<ul id="nav-links" class="hidden" role="menu">
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="web.html">On the web</a></li>
+				<li><a href="photos.html">Photos</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
 
 	<div class="content">
 
-        <h1>Photos 📷</h1>
-        <p>Here are some cool photos I've taken. If you have an account on a Fediverse service, like Mastodon, PixelFed, or Pleroma, you can follow my pictures at <a href="https://pixelfed.social/corbindavenport" target="_blank">@corbindavenport@pixelfed.social.</a></p>
-        <div class="photos-container"><script src="https://feeds.feedburner.com/corbin-photos?format=sigpro" type="text/javascript"></script></div>
+		<h1>Photos 📷</h1>
+		<p>Here are some cool photos I've taken. If you have an account on a Fediverse service, like Mastodon, PixelFed, or Pleroma, you can follow my pictures at <a href="https://pixelfed.social/corbindavenport" target="_blank">@corbindavenport@pixelfed.social.</a></p>
+		<div class="photos-container">
+			<script src="https://feeds.feedburner.com/corbin-photos?format=sigpro" type="text/javascript"></script>
+		</div>
 		<noscript>
 			<p>
 				<i>Uh oh, you have JavaScript disabled. You'll have to click <a href="https://pixelfed.social/corbindavenport" target="_blank">here</a> to see my pictures.</i>
@@ -73,6 +74,8 @@
 		</noscript>
 
 	</div>
+
+	<script src="js/main.js"></script>
 
 </body>
 
