@@ -6,7 +6,7 @@ fetch('https://api.twitch.tv/helix/streams?user_id=37983012', {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
-        'Client-ID': 'opig3niaq171he7udn4r9t1lrm3xdv'
+        'Client-ID': 'k6gm43qchk3j4swweo3bj95ky4h9mb'
     }
 }).then(function (response) {
     response.json().then(function (data) {
