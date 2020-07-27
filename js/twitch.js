@@ -2,11 +2,14 @@
 // Testing me: https://api.twitch.tv/helix/streams?user_id=37983012
 // Testing another channel: https://api.twitch.tv/helix/streams?channel_name=twitchrivals
 
+// To regenerate token: curl -d "client_id=clientGoesHere&client_secret=secretGoesHere&grant_type=client_credentials&scope=user:read:broadcast" -X POST https://id.twitch.tv/oauth2/token
+
 fetch('https://api.twitch.tv/helix/streams?user_id=37983012', {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
-        'Client-ID': 'k6gm43qchk3j4swweo3bj95ky4h9mb'
+        'Client-ID': 'k6gm43qchk3j4swweo3bj95ky4h9mb',
+		'Authorization': 'Bearer df7m64njo8pkuvf96uqp8fdqmcbijv'
     }
 }).then(function (response) {
     response.json().then(function (data) {
