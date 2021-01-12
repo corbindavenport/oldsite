@@ -404,7 +404,7 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
 
-	.content {
+	.content, #nav-links {
 		animation: none !important;
 	}
 	
