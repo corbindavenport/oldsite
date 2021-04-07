@@ -199,7 +199,7 @@ h2 {
 
 /* Hide menu button on large screens */
 
-@media screen and (min-width: 751px) {
+@media screen and (min-width: 701px) {
 
 	#nav-btn {
 		display: none;
@@ -226,7 +226,7 @@ h2 {
 
 /* Phones */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 700px) {
 
 	@keyframes fadein {
 		from {
@@ -328,12 +328,16 @@ h2 {
 
 @media screen and (max-width: 350px) {
 
-	.name, .email-icon {
+	.name {
 		display: none;
 	}
 
 	#nav-btn {
-		padding: 0;
+		padding: 0px 10px;
+	}
+
+	#nav-btn::before {
+		content:'Menu '
 	}
 
 	nav {
