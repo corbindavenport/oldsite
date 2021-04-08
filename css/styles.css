@@ -199,7 +199,7 @@ h2 {
 
 /* Hide menu button on large screens */
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 751px) {
 
 	#nav-btn {
 		display: none;
@@ -226,7 +226,7 @@ h2 {
 
 /* Phones */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
 
 	@keyframes fadein {
 		from {
