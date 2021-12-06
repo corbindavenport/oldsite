@@ -3,13 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Corbin Davenport - On the web</title>
+	<title>Corbin Davenport - Photos</title>
 	<meta name="description" content="Corbin Davenport is a tech journalist, web developer, and browser extension developer.">
 	<meta name="viewport" content="initial-scale=1">
 	<meta name="keywords" content="corbin, davenport, corbin davenport">
 	<meta name="language" content="English">
 	<meta name="supported-color-schemes" content="dark light">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/photos.css">
 	<link href="favicon.ico" rel="icon" type="image/x-icon">
 	<meta name="theme-color" content="#FAFAFA">
 	<!-- Analytics -->
@@ -28,8 +29,8 @@
 			<div id="nav-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</div>
 			<ul id="nav-links" class="hidden" role="menu">
 				<li><a href="projects.html">Projects</a></li>
-				<li><a href="web.html" class="active">Web Feed</a></li>
-				<li><a href="photos.html">Photos</a></li>
+				<li><a href="web.html">On the web</a></li>
+				<li><a href="photos.html" class="active">Photos</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</div>
@@ -37,18 +38,21 @@
 
 	<div class="content">
 
-		<h1>Web Feed 🌐</h1>
-		<p>This is a feed of some recent content created by or featuring me on the web, such as articles, blog posts, YouTube videos, and podcasts.</p>
-		<script src="https://feeds.feedburner.com/corbin-web?format=sigpro" type="text/javascript"></script>
+		<h1>Photos 📷</h1>
+		<p>Here are some cool photos I've taken. If you have an account on a Fediverse service, like Mastodon, PixelFed, or Pleroma, you can follow my pictures at <a href="https://pixelfed.social/corbindavenport" target="_blank">@corbindavenport @ pixelfed.social.</a></p>
+		<div class="photos-container">
+			<script src="https://feeds.feedburner.com/corbin-photos?format=sigpro" type="text/javascript"></script>
+		</div>
 		<noscript>
 			<p>
-				<i>Uh oh, you have JavaScript disabled. You'll have to click <a href="https://feeds.feedburner.com/corbin-web" target="_blank">here</a> to see the feed.</i>
+				<i>Uh oh, you have JavaScript disabled. You'll have to click <a href="https://pixelfed.social/corbindavenport" target="_blank">here</a> to see my pictures.</i>
 			</p>
 		</noscript>
 
 	</div>
 
 	<script src="js/main.js"></script>
+    <script src="js/photos.js"></script>
 
 </body>
 
