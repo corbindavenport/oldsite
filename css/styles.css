@@ -166,6 +166,10 @@ h2 {
 	margin-top: 50px;
 }
 
+hr {
+	border: 3px solid #424242;
+}
+
 .install-button-container img {
 	margin-right: 15px;
 }
@@ -388,6 +392,10 @@ h2 {
 	body, nav, nav ul li a, nav .name a, nav ul, #nav-links, .feedburnerFeedBlock .headline {
 		background-color: #262626;
 		color: #FAFAFA;
+	}
+
+	hr {
+		border-color: #FAFAFA;
 	}
 
 	a:hover, nav ul li a:hover, nav .name a:hover {
