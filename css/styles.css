@@ -106,10 +106,6 @@ nav ul li a:hover, nav .name a:hover {
 	margin-bottom: 40px;
 }
 
-.feedburnerFeedBlock ul li div {
-	text-align: justify;
-}
-
 .feedburnerFeedBlock .headline {
 	font-family: 'Didact Gothic', sans-serif;
 	font-weight: bold;
@@ -147,10 +143,6 @@ nav ul li a:hover, nav .name a:hover {
 	margin-top: calc(8% + 120px);
 	animation: fadein 0.5s;
 	z-index: 1;
-}
-
-.content p {
-	text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
