@@ -93,34 +93,6 @@ nav ul li a:hover, nav .name a:hover {
 	text-decoration: none;
 }
 
-/* Feedburner styles */
-
-.feedburnerFeedBlock ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.feedburnerFeedBlock ul li {
-	margin-top: 40px;
-	margin-bottom: 40px;
-}
-
-.feedburnerFeedBlock .headline {
-	font-family: 'Didact Gothic', sans-serif;
-	font-weight: bold;
-	font-size: 30px;
-	line-height: 30px;
-}
-
-.feedburnerFeedBlock .date {
-	font-style: italic;
-}
-
-.feedburnerFeedBlock #creditfooter {
-	display: none;
-}
-
 /* Content */
 
 @keyframes fadein {
@@ -272,15 +244,6 @@ hr {
 		margin-right: 0;
 	}
 
-	.feedburnerFeedBlock .headline {
-		background-color: #FAFAFA;
-		position: sticky;
-		top: 80px;
-		display: block;
-		padding-bottom: 10px;
-		border-bottom: 5px solid #424242;
-	}
-
 	.content {
 		margin-top: 120px;
 	}
@@ -370,18 +333,13 @@ hr {
 		margin-top: 0px;
 	}
 
-	.feedburnerFeedBlock .headline {
-		font-size: 20px;
-		position: initial;
-	}
-
 }
 
 /* Dark mode support */
 
 @media (prefers-color-scheme: dark) {
 
-	body, nav, nav ul li a, nav .name a, nav ul, #nav-links, .feedburnerFeedBlock .headline {
+	body, nav, nav ul li a, nav .name a, nav ul, #nav-links {
 		background-color: #262626;
 		color: #FAFAFA;
 	}
