@@ -234,16 +234,6 @@ hr {
 		font-size: 100%;
 	}
 
-	.install-button-container {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-around;
-	}
-
-	.install-button-container img {
-		margin-right: 0;
-	}
-
 	.content {
 		margin-top: 120px;
 	}
