@@ -136,6 +136,15 @@ hr {
 
 .install-button-container img {
 	margin-right: 15px;
+	height: 60px;
+	width: auto;
+	border: 3px solid #424242;
+	border-radius: 10px;
+	transition: 0.3s;
+}
+
+.install-button-container img:hover {
+	border-color: #03A9F4;
 }
 
 .desktop-hide {
@@ -260,6 +269,11 @@ hr {
 		display: block;
 		text-align: center;
 		margin-left: 0;
+	}
+
+	.install-button-container img {
+		height: 45px;
+		margin-right: 5px;
 	}
 
 }
