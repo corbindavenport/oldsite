@@ -40,6 +40,7 @@ nav {
 	font-weight: bold;
 	font-family: 'Didact Gothic', sans-serif;
 	z-index: 10;
+	box-shadow: 0px 10px 10px #FAFAFA;
 }
 
 nav .nav-container {
@@ -346,6 +347,10 @@ hr {
 	body, nav, nav ul li a, nav .name a, nav ul, #nav-links {
 		background-color: #262626;
 		color: #FAFAFA;
+	}
+
+	nav {
+		box-shadow: 0px 10px 10px #262626;
 	}
 
 	hr {
